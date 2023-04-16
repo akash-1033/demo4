@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+     <style>
+        /* CSS RESET */
+*{
+    
+    margin: 5px 5px;
+    /* padding: 4px 4px; */
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 80px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+/* Navigation bar logo and images */
+#logo{
+    margin: 15px 20px;
+    height: 40px;
+    z-index: 1;
+}
+#navbar ul {
+    display: inline;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center; 
+    justify-content: center;
+}
+.box1{
+    /* display: inline; */
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url("back2.png");
+    height: 1300px;
+    width: 100%;
+    color: black;
+    z-index: 0;
+}
+.box2{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    top: 150px;
+    /* display: inline; */
+    display: inline-flex;
+    height: 550px;
+    width: 20%;
+    background-color: antiquewhite;
+    color: black;
+    right: 50px;
+    border: solid black;
+    border-radius: 20px;
+}
+.box3{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    top: 300px;
+    display: inline-flex;
+    height: 200px;
+    width: 600px;
+    color: black;
+    left: 200px;
+    border: solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: antiquewhite;
+}
+.box4{
+    height: 200px;
+    width: 650px;
+    display: inline-flex;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 800px;
+    left: 50px;
+    /* background-image: url("gym.jpg"); */
+}
+.box5{
+    height: 200px;
+    width: 650px;
+    display: inline-flex;
+    background-color: aqua;
+    position: absolute;
+    top: 800px;
+    left: 750px;
+}
+.box6{
+    height: 200px;
+    width: 650px;
+    display: inline-flex;
+    background-color: blue;
+    position: absolute;
+    top: 1050px;
+    left: 50px;
+}
+.box7{
+    height: 200px;
+    width: 650px;
+    display: inline-flex;
+    background-color: green;
+    position: absolute;
+    top: 1050px;
+    left: 750px;
+}
+.form-group{
+    /* text-align:  center;
+    justify-content: center; */
+    position: relative;
+    right: 175px;
+    top: 20px;
+    height: 35px;
+}
+footer{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+ </style>
+</head>
+<body>
+    <nav id="navbar">
+    <div id="logo">
+        <img src="https://media.istockphoto.com/id/1313644269/vector/gold-and-silver-circle-star-logo-template.jpg?s=612x612&w=0&k=20&c=hDqCI9qTkNqNcKa6XS7aBim7xKz8cZbnm80Z_xiU2DI="  width="100px" height="100px" alt="Kumawat">
+    </div>
+    <ul>
+        <!-- <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About</a></li>
+        <li class="item"><a href="#">Contact Us</a></li>
+        <li class="item"><a href="#">Services</a></li> -->
+   <h1>Amerika ke dalal Quiz company</h1>
+    </ul>
+    </nav>
+    <main>
+        <div class="box1"><h1>This is main page</h1></div>
+        <div class="box2">this is leader board page</div>
+        <div class="box3">
+            <br>
+            Fill your details here
+            <form action ="/index" method="POST">
+                <div class="form-group">
+                    <br>
+                <label for="fname">Username:</label>
+                <input type="text" name="name" placeholder="Enter your username here">
+                </div>
+                <div class="form-group">
+                    <br>
+                <label for="Genre">Choose a Genre:</label>
+               <select id="Genre">
+                <option value="{{ abhinav }}">Abhinav</option>
+               <option value="Himanshu">Himanshu</option>
+               <option value="akash">Akash</option>
+                <option value="ankit">Ankit</option>
+                </select>
+                </div>
+                <div class="form-group">
+                    <br>
+                <input type="Submit" value="Continue" >
+                </div>
+            </form>
+        </div>
+        <div class="box4"><a href="http://127.0.0.1:5000/a"><img src="https://thumbs.dreamstime.com/b/spring-summer-season-abstract-nature-background-grass-blue-sky-back-49716369.jpg" height="180px" width= "280px" alt="romance"></a></div>
+        <div class="box5"><a href="http://127.0.0.1:5000/a"><img src="{{url_for('static', filename='image.png')}}" height="180px" width= "280px" alt="movies">  </a></div>
+        <div class="box6"><a href="http://127.0.0.1:5000/a"><img src="https://thumbs.dreamstime.com/b/spring-summer-season-abstract-nature-background-grass-blue-sky-back-49716369.jpg" height="180px" width= "280px" alt="study">   </a></div>
+        <div class="box7"><a href="http://127.0.0.1:5000/a"><img src="https://thumbs.dreamstime.com/b/spring-summer-season-abstract-nature-background-grass-blue-sky-back-49716369.jpg" height="180px" width= "280px" alt="politics"></a></div>
+    </main>
+    <footer>
+        <h1>This is end of the page </h1>
+    </footer>
+</body>
+</html>
